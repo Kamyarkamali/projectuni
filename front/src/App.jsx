@@ -34,7 +34,7 @@ function App() {
               <Routes>
                 <Route path="/sinajabbari" element={<AdminPanel />}>
                   <Route index element={<MainSaidbar />} />
-                  <Route path="detailse" element={<Detailse />} />
+                  {/* <Route path="detailse" element={<Detailse />} /> */}
                 </Route>
               </Routes>
             </main>
@@ -42,9 +42,9 @@ function App() {
         </>
       )}
       {isDetailsePage && (
-        <header className="p-4 bg-gray-200">
+        <header className="p-4 ">
           {/* اینجا محتوای header خاص برای صفحه detailse قرار می‌دهید */}
-          <h1>Detailse Page Header</h1>
+          <Detailse />
         </header>
       )}
     </div>
