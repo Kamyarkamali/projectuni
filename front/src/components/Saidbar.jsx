@@ -1,15 +1,38 @@
 import React from "react";
 
+import arrow from "../assets/images/arrow.png";
+import { Link } from "react-router-dom";
+
 function Saidbar() {
   return (
-    <div className="border-[1px] w-[200px] bg-gray-200 h-screen">
-      <div className="flex flex-col items-center bg-gray-200">
-        <p className="inline-block bg-gray-200">دانشجو</p>
-        <p className="inline-block bg-gray-200">شهریه</p>
-        <p className="inline-block bg-gray-200">نامه های اداری</p>
-        <p className="inline-block bg-gray-200">گزارش های آموزش</p>
-        <p className="inline-block bg-gray-200">اطلاعات جامع دانشجو</p>
+    <div className="w-[150px] bg-[#F9F8F4] h-screen rounded-l-lg ">
+      <div className="flex flex-col text-[12px] items-start bg-[#F9F8F4] relative">
+        <div className="flex mt-2 items-center justify-between w-full hover:border-[1px] cursor-pointer border-yellow-300 p-1">
+          <p className="inline-block bg-[#F9F8F4]">دانشجو</p>
+          <img src={arrow} alt="arrow" />
+        </div>
+        <div className="flex mt-2 items-center justify-between w-full hover:border-[1px] cursor-pointer border-yellow-300 p-1">
+          <p className="inline-block bg-[#F9F8F4]">شهریه</p>
+          <img src={arrow} alt="arrow" />
+        </div>
+        <div className="flex mt-2 items-center justify-between w-full hover:border-[1px] cursor-pointer border-yellow-300 p-1">
+          <p className="inline-block bg-[#F9F8F4]">نامه های اداری</p>
+          <img src={arrow} alt="arrow" />
+        </div>
+
+        <div className="flex mt-2 items-center justify-between w-full hover:border-[1px] cursor-pointer border-yellow-300 p-1">
+          <p className="inline-block bg-[#F9F8F4]">گزارش های آموزش</p>
+          <img src={arrow} alt="arrow" />
+        </div>
+        <Link to={"/sinajabbari/detailse"}>
+          <p className="inline-block mt-2 bg-[#F9F8F4] hover:border-[1px] cursor-pointer border-yellow-300 p-1 w-full">
+            اطلاعات جامع دانشجو
+          </p>
+        </Link>
       </div>
+      <p className="absolute text-[10px] bottom-[-3.4rem] right-2">
+        آخرين ورود : 1403.04.13 ساعت12:07
+      </p>
     </div>
   );
 }
