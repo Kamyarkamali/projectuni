@@ -4,8 +4,33 @@ import vorod from "../assets/images/vorod.png";
 
 function Form() {
   const [captchaValue, setCaptchaValue] = useState(null);
-  const submitHandeler = (event) => {
+  const [Info, setInfo] = useState({
+    email: "",
+    password: "",
+  });
+  const handleUserChange = (e) => {
+    setInfo({
+      ...Info,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const submitHandeler = async (event) => {
     event.preventDefault();
+    // ! ramtin added
+    try {
+      const response = await fetch("http://localhost:5000/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({Info}),
+      });
+      const result = await response.json();
+      console.log(result)
+      console.log(result.message);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const alertHandeler = () => {
@@ -19,8 +44,7 @@ function Form() {
   }, []);
 
   const generateCaptcha = () => {
-    const characters =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     let captchaText = "";
     for (let i = 0; i < 5; i++) {
       captchaText += characters.charAt(
@@ -63,6 +87,9 @@ function Form() {
               شناسه کاربری:
             </label>
             <input
+              onChange={handleUserChange}
+              value={Info.email}
+              name="email"
               type="text"
               className="border-[1px] outline-none text-[12px] bg-[#FFF] absolute w-[130px] border-gray-400 h-[18px]"
             />
@@ -72,6 +99,9 @@ function Form() {
               گذرواژه:
             </label>
             <input
+              onChange={handleUserChange}
+              value={Info.password}
+              name="password"
               type="password"
               className="border-[1px] outline-none text-[12px] w-[130px] bg-[#FFF] mr-[3.3rem] border-gray-400 h-[18px]"
             />
