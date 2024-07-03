@@ -2,8 +2,8 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 
 exports.handleLogin = async (req, res, next) => {
-  const { email, password } = req.body;
-
+  const { email, password } = req.body.Info;
+console.log(req.body.Info)
   try {
     const user = await User.findOne({ email });
     if (!user) {
@@ -52,8 +52,8 @@ exports.getInfo = async(req,res)=>{
 exports.handleResetPassword = async (req, res, next) => {
   const userId = "65b50acf8257bc5b5327263b";
 
-  const { oldPassword, newPassword, confirmPassword } = req.body;
-  const user = await User.findOne({ _id: userId });
+  const { oldPassword, newPassword, confirmPassword ,email} = req.body;
+  const user = await User.findOne({email });
   const { password } = user;
   const isEqual = await bcrypt.compare(oldPassword, password);
 
