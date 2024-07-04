@@ -1,46 +1,186 @@
 import React from "react";
 
-function Tabale1() {
+const Tabale1 = () => {
   return (
-    <table className="border-[1px] border-gray-600 w-[400px]">
-      <thead>
-        <tr className="border-b-[1px] border-gray-600">
-          <th className="text-center border-l-[1px] bg-[#ECE9D8] border-gray-600 w-[40px]">
-            ردیف
-          </th>
-          <tr>
-            <th className="w-[50px] border-l-[1px] border-gray-600 bg-[#ECE9D8]">
+    <div>
+      <table className="border-[1px] border-gray-600 text-xs font-thin ">
+        <thead>
+          <tr className="border-b-[1px] border-gray-600 bg-[#ECE9D8]">
+            <td className="text-center border-l-[1px] bg-[#ECE9D8] border-gray-600 pt-2">
+              ردیف
+            </td>
+            <td className="border-l-[1px] border-gray-600 bg-[#ECE9D8] px-2 text-center pt-2">
               ترم
-            </th>
-
-            <th className="border-l-[1px] border-gray-600 w-[140px] h-[30px] bg-[#ECE9D8]">
-              وضع نوع ترم
-            </th>
+            </td>
+            <td
+              className="bg-[#ECE9D8] pt-5 px-10 whitespace-nowrap border-l-[1px] border-gray-600"
+              colSpan="2"
+            >
+              وضع و نوع ترم
+            </td>
+            <td
+              className="text-center border-l-[1px] border-gray-600  bg-[#ECE9D8] pt-2 "
+              colSpan="2"
+            >
+              اخذ شده
+              <div className="w-full h-[1px] bg-gray-600"></div>
+              <td className="border-l-[1px] border-gray-600 bg-[#ECE9D8] px-2 ">
+                {" "}
+                ترم
+              </td>
+              <td className="border-l-[1px] border-gray-600  bg-[#ECE9D8] px-2">
+                متوالی
+              </td>
+            </td>
+            <td
+              className="text-center border-l-[1px] border-gray-600  bg-[#ECE9D8] pt-2"
+              colSpan="3"
+            >
+              واحد گذرانده
+              <div className="w-full h-[1px] bg-gray-600"></div>
+              <td className="border-l-[1px] border-gray-600 bg-[#ECE9D8] px-2 ">
+                {" "}
+                ترم
+              </td>
+              <td className="border-l-[1px] border-gray-600  bg-[#ECE9D8] px-2">
+                متوالی
+              </td>
+              <td className="border-l-[1px] border-gray-600  bg-[#ECE9D8] px-2">
+                کل
+              </td>
+            </td>
+            <td className="border-l-[1px]  border-gray-600  bg-[#ECE9D8] pt-2 px-1">
+              اعلام نشده
+            </td>
+            <td className="border-l-[1px]  border-gray-600  bg-[#ECE9D8] pt-2 px-1">
+              واحد ناتمام
+            </td>
+            <td className="border-l-[1px]  border-gray-600  bg-[#ECE9D8] pt-2 px-1">
+              حذف شده
+            </td>
+            <td className="border-l-[1px]  border-gray-600  bg-[#ECE9D8] pt-2 px-1">
+              رد شده
+            </td>
+            <td
+              className="text-center border-l-[1px] border-gray-600  bg-[#ECE9D8] pt-2"
+              colSpan="2"
+            >
+              معدل
+              <div className="w-full h-[1px] bg-gray-600"></div>
+              <td className="border-l-[1px] border-gray-600 bg-[#ECE9D8] px-2 ">
+                {" "}
+                ترم
+              </td>
+              <td className="border-l-[1px] border-gray-600  bg-[#ECE9D8] px-2">
+                متوالی
+              </td>
+            </td>
+            <td
+              className="text-center border-l-[1px] border-gray-600  bg-[#ECE9D8] pt-2"
+              colSpan="2"
+            >
+              <td className="border-l-[1px]  border-gray-600 bg-[#ECE9D8] px-1">مشروط</td>
+              <td className="  bg-[#ECE9D8] pt-2  px-1">شهریه</td>
+            </td>{" "}
           </tr>
-        </tr>
-      </thead>
-      <tbody>
-        <tr className="border-b-[1px] border-gray-600">
-          <th>1</th>
-
-          <tr>
-            <td className=" text-center w-[40px]">4022</td>
-            <td className=" text-center w-[170px]">مشغول به تحصیل - عادی</td>
-          </tr>
-        </tr>
-
-        <tr>
-          <th>2</th>
-          <tr>
-            <td className="text-center w-[40px]">4022</td>
-            <td className="text-center w-[170px] h-[19px]">
-              مشغول به تحصیل - عادی
+        </thead>
+        <tbody>
+          <tr className="border-b-[1px] border-l-[1px] border-gray-600">
+            <th className="text-red-600 font-mono">1</th>
+            <td className="">4022</td>
+            <td
+              className="text-center h-[19px] pl-10 whitespace-nowrap"
+              colSpan="2"
+            >
+              مشغول به تحصیل - عاد ی
+            </td>
+            <td colSpan="1" className="w-fit">
+              16
+            </td>
+            <td colSpan="1" className="w-fit">
+              16
+            </td>
+            <td colSpan="1" className="w-fit">
+              16
+            </td>
+            <td colSpan="1" className="w-fit">
+              16
+            </td>
+            <td colSpan="1" className="w-fit">
+              16
+            </td>
+            <td colSpan="1" className="w-fit">
+              0
+            </td>
+            <td colSpan="1" className="w-fit">
+              0
+            </td>
+            <td colSpan="1" className="w-fit">
+              0
+            </td>
+            <td colSpan="1" className="w-fit">
+              0
+            </td>
+            <td colSpan="1" className="w-fit">
+              14.76
+            </td>
+            <td colSpan="1" className="w-fit">
+              14.76
+            </td>
+            <td colSpan="2" className="w-fit text-red-500 text-center">
+              ______
             </td>
           </tr>
-        </tr>
-      </tbody>
-    </table>
+          <tr className="border-b-[1px] border-l-[1px] border-gray-600">
+            <th className="text-red-600 font-mono">1</th>
+            <td className="">4022</td>
+            <td
+              className="text-center h-[19px] pl-10 whitespace-nowrap"
+              colSpan="2"
+            >
+              مشغول به تحصیل - عاد ی
+            </td>
+            <td colSpan="1" className="w-fit">
+              16
+            </td>
+            <td colSpan="1" className="w-fit">
+              16
+            </td>
+            <td colSpan="1" className="w-fit">
+              16
+            </td>
+            <td colSpan="1" className="w-fit">
+              16
+            </td>
+            <td colSpan="1" className="w-fit">
+              16
+            </td>
+            <td colSpan="1" className="w-fit">
+              0
+            </td>
+            <td colSpan="1" className="w-fit">
+              0
+            </td>
+            <td colSpan="1" className="w-fit">
+              0
+            </td>
+            <td colSpan="1" className="w-fit">
+              0
+            </td>
+            <td colSpan="1" className="w-fit">
+              14.76
+            </td>
+            <td colSpan="1" className="w-fit">
+              14.76
+            </td>
+            <td colSpan="2" className="w-fit text-red-500 text-center">
+              ______
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
-}
+};
 
 export default Tabale1;
