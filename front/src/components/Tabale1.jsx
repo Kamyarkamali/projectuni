@@ -80,13 +80,13 @@ const Tabale1 = () => {
               </td>
             </td>
             <td
-              className="text-center border-l-[1px] border-gray-600  bg-[#ECE9D8] pt-2"
+              className="text-center border-l-[1px] border-gray-600  bg-[#ECE9D8]"
               colSpan="2"
             >
-              <td className="border-l-[1px]  border-gray-600 bg-[#ECE9D8] px-1">
+              <td className="border-l-[1px]  border-gray-600 bg-[#ECE9D8] pt-5 px-1">
                 مشروط
               </td>
-              <td className="  bg-[#ECE9D8] pt-2  px-1">شهریه</td>
+              <td className="  bg-[#ECE9D8] pt-5 px-1">شهریه</td>
             </td>{" "}
           </tr>
         </thead>
@@ -100,38 +100,38 @@ const Tabale1 = () => {
             >
               مشغول به تحصیل - عاد ی
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               16
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               16
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               16
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               16
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               16
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               0
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               0
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               0
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               0
             </td>
-            <td colSpan="1" className="w-fit">
-              14.76
+            <td colSpan="1" className="w-fit font-mono">
+              15.51
             </td>
-            <td colSpan="1" className="w-fit">
-              14.76
+            <td colSpan="1" className="w-fit font-mono">
+              15.51
             </td>
             <td colSpan="2" className="w-fit text-red-500 text-center">
               ______
@@ -147,38 +147,38 @@ const Tabale1 = () => {
             >
               مشغول به تحصیل - عاد ی
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               16
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               16
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               16
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               16
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               16
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               0
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               0
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               0
             </td>
-            <td colSpan="1" className="w-fit">
+            <td colSpan="1" className="w-fit font-mono">
               0
             </td>
-            <td colSpan="1" className="w-fit">
-              14.76
+            <td colSpan="1" className="w-fit font-mono">
+             15.52
             </td>
-            <td colSpan="1" className="w-fit">
-              14.76
+            <td colSpan="1" className="w-fit font-mono">
+             15.52
             </td>
             <td colSpan="2" className="w-fit text-red-500 text-center">
               ______
