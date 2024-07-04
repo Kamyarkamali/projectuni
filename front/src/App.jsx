@@ -10,8 +10,11 @@ import Saidbar from "./components/Saidbar";
 import Detailse from "./components/Detailse";
 import Detailsse2 from "./components/Detailsse2";
 
+import { useNavigate } from "react-router-dom";
+
 function App() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const isDefaultPage = location.pathname === "/";
   const isDetailsePage = location.pathname === "/sinajabbari/detailse";
@@ -19,7 +22,12 @@ function App() {
 
   useEffect(() => {
     useTitle("سیستم جامع دانشگاهی گلستان");
-  }, []);
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/");
+    }
+  }, [navigate]);
 
   return (
     <div className="flex flex-col h-screen">

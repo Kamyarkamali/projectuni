@@ -26,6 +26,14 @@ function Form() {
         body: JSON.stringify({ Info }),
       });
       const result = await response.json();
+
+      if (response.ok) {
+        localStorage.setItem("token", result.user.email);
+        console.log("successful");
+        alert("سینا جباری خوش  امدید");
+        window.location.href = "/sinajabbari";
+      }
+
       console.log(result);
       console.log(result.message);
     } catch (error) {
