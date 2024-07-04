@@ -18,7 +18,7 @@ function Form() {
   // ! ramtin added
   const submitHandeler = async (event) => {
     event.preventDefault();
-    setloading({ status: true, value: "" });
+    setloading({ status: true, value: false });
     try {
       const response = await fetch("http://localhost:5000/api/login", {
         method: "POST",
@@ -194,21 +194,22 @@ function Form() {
           استفاده نماييد) | بازيابي كلمه عبور اساتيد | | مشاهده دروس ارائه شده
         </p>
       </div>
-      {loading.status === true && loading.value === false ? (
-         <div className="bg-[#8b008b] flex items-center gap-[10rem] absolute bottom-[-9.6rem] z-20 w-full left-0">
-         <p className="bg-[#8b008b] text-white text-sm">1 خطا</p>
-         <p className="bg-[#8b008b]  text-[12px] text-white">
-         کد1 : شناسه کاربري يا گذرواژه اشتباه است.
-         </p>
-       </div>
-      ) : (
+      {console.log(loading.status)}
+      {loading.status === false ? (
+        ""
+      ) : loading.status === true  && loading.value === true  ? (
         <div className="bg-green-800 flex items-center gap-[10rem] absolute bottom-[-9.6rem] z-20 w-full left-0">
         <p className="bg-green-800 text-white text-sm">1 پیغام</p>
         <p className="bg-green-800  text-[12px] text-white">
-          جستجوي اطلاعات دانشجو انجام شد
+          ورود با موفقیت انجام شد
         </p>
       </div>
-      )}
+      ): <div className="bg-[#8b008b] flex items-center gap-[10rem] absolute bottom-[-9.6rem] z-20 w-full left-0">
+      <p className="bg-[#8b008b] text-white text-sm">1 خطا</p>
+      <p className="bg-[#8b008b]  text-[12px] text-white">
+      کد1 : شناسه کاربري يا گذرواژه اشتباه است.
+      </p>
+    </div>}
     </>
   );
 }
