@@ -23,10 +23,10 @@ function Form() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({Info}),
+        body: JSON.stringify({ Info }),
       });
       const result = await response.json();
-      console.log(result)
+      console.log(result);
       console.log(result.message);
     } catch (error) {
       console.log(error);
@@ -115,9 +115,9 @@ function Form() {
               className="border-[1px] outline-none text-[12px] w-[130px] mr-[6.9rem] border-gray-400 h-[18px]"
             />
 
-            <div className="absolute left-[-20rem] w-[30vw] flex justify-center p-3">
+            <div className="absolute left-[-8rem] top-[-1rem] bg-[#f9f8f4] flex justify-center p-3">
               {/* capcher */}
-              <div className="bg-white w-full p-4">
+              <div className="bg-[#f9f8f4] border-[1px] border-gray-400 w-full p-4">
                 <svg width="100" height="30" className="px-2">
                   {captcha.split("").map((char, index) => (
                     <text
