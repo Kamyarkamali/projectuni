@@ -80,13 +80,13 @@ const Tabale1 = () => {
               </td>
             </td>
             <td
-              className="text-center border-l-[1px] border-gray-600  bg-[#ECE9D8] pt-2"
+              className="text-center border-l-[1px] border-gray-600  bg-[#ECE9D8]"
               colSpan="2"
             >
-              <td className="border-l-[1px]  border-gray-600 bg-[#ECE9D8] px-1">
+              <td className="border-l-[1px]  border-gray-600 bg-[#ECE9D8] pt-5 px-1">
                 مشروط
               </td>
-              <td className="  bg-[#ECE9D8] pt-2  px-1">شهریه</td>
+              <td className="  bg-[#ECE9D8] pt-5 px-1">شهریه</td>
             </td>{" "}
           </tr>
         </thead>

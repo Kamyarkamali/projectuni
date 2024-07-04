@@ -194,7 +194,6 @@ function Form() {
           استفاده نماييد) | بازيابي كلمه عبور اساتيد | | مشاهده دروس ارائه شده
         </p>
       </div>
-      {console.log(loading.status)}
       {loading.status === false ? (
         ""
       ) : loading.status === true  && loading.value === true  ? (
