@@ -28,16 +28,19 @@ function Detailse() {
   return (
     <div className="flex justify-between max-w-[1400px] p-2 mx-auto">
       <div className="relative">
-        <div className="flex items-center text-[10px] gap-2">
+        <div className="flex items-center text-[10px] gap-2 absolute bottom-[18rem]">
           <img src={arrowup} alt="/" className="w-[10px]" />
-          <button className="border-[1px] shadow-sm p-1 rounded-md">
+          <button className="border-[1px] w-[130px] h-[30px] shadow-sm p-1 rounded-md">
             منوی کاربری
           </button>
-          <button className="border-t-[3px] shadow-md border-yellow-400 p-1 rounded-md">
+          <button className="border-[1px] w-[130px] h-[30px] shadow-sm p-1 rounded-md">
             اطلاعات جامع دانشجو
           </button>
+          <button className="border-t-[3px] shadow-md border-yellow-400 w-[130px] h-[30px] rounded-md">
+            اطلاعات جامع دانشجو[2]
+          </button>
         </div>
-        <div className="flex items-center gap-3 text-sm mt-4">
+        <div className="flex items-center gap-3 border-t-[1px] p-2 border-gray-400 text-sm mt-4">
           <button className="border-[1px] p-1 border-gray-500 shadow-sm shadow-gray-300 rounded-md">
             <img src={quastion} alt="/" className="w-[14px]" />
           </button>
@@ -126,7 +129,7 @@ function Detailse() {
             }  gap-2 flex items-center right-[36rem] top-[2.4rem]`}
           >
             <img src={pic} alt="/" />
-            <p>.</p>
+            <p className="overflow-hidden">.</p>
           </div>
 
           <div className="absolute right-2 mt-9">
@@ -146,7 +149,7 @@ function Detailse() {
         <img src={tick2} alt="/" />
       </div>
 
-      <div className="absolute flex items-center gap-3 bottom-[-5.9rem]  right-4 border-[1px] w-fit border-gray-700">
+      <div className="absolute flex items-center gap-3 bottom-[-2rem]  right-4 border-[1px] w-fit border-gray-700">
         <div className="flex items-center text-[12px]">
           <p>معدل دانشگاه:</p>
           <p>14.80</p>
@@ -163,7 +166,7 @@ function Detailse() {
         </div>
       </div>
 
-      <div className="absolute flex gap-3 items-center bottom-[-6rem] right-[22rem]">
+      <div className="absolute flex gap-3 items-center bottom-[-2.4rem] right-[22rem]">
         <img
           src={pey}
           alt="/"
