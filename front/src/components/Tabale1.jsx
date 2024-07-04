@@ -1,6 +1,10 @@
 import React from "react";
 
 const Tabale1 = () => {
+  const clickHandeler = () => {
+    window.location.href = "/sinajabbari/detailse2";
+  };
+
   return (
     <div>
       <table className="border-[1px] border-gray-600 text-xs font-thin ">
@@ -79,7 +83,9 @@ const Tabale1 = () => {
               className="text-center border-l-[1px] border-gray-600  bg-[#ECE9D8] pt-2"
               colSpan="2"
             >
-              <td className="border-l-[1px]  border-gray-600 bg-[#ECE9D8] px-1">مشروط</td>
+              <td className="border-l-[1px]  border-gray-600 bg-[#ECE9D8] px-1">
+                مشروط
+              </td>
               <td className="  bg-[#ECE9D8] pt-2  px-1">شهریه</td>
             </td>{" "}
           </tr>
@@ -135,7 +141,8 @@ const Tabale1 = () => {
             <th className="text-red-600 font-mono">1</th>
             <td className="">4022</td>
             <td
-              className="text-center h-[19px] pl-10 whitespace-nowrap"
+              onClick={clickHandeler}
+              className="text-center cursor-pointer h-[19px] pl-10 whitespace-nowrap"
               colSpan="2"
             >
               مشغول به تحصیل - عاد ی

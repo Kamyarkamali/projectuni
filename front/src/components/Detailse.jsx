@@ -112,7 +112,7 @@ function Detailse() {
           <div className="absolute gap-2 flex items-center right-[17rem] top-[12.4rem] ">
             <label className="w-[69px]">آخرین وضعیت:</label>
             <p className="w-[80px] border-blue-500 text-blue-600 border-b-[1px]">
-              مشغول به تحصيل{" "}
+              مشغول به{" "}
             </p>
           </div>
 

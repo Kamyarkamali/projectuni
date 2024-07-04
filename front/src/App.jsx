@@ -8,15 +8,14 @@ import MainSaidbar from "./components/MainSaidbar";
 import HeaderSaidbar from "./components/HeaderSaidbar";
 import Saidbar from "./components/Saidbar";
 import Detailse from "./components/Detailse";
+import Detailsse2 from "./components/Detailsse2";
 
 function App() {
   const location = useLocation();
 
-  // Check if we are on the default page ("/")
   const isDefaultPage = location.pathname === "/";
-
-  // Check if we are on the detailse page ("/sinajabbari/detailse")
   const isDetailsePage = location.pathname === "/sinajabbari/detailse";
+  const isDetailsse2Page = location.pathname === "/sinajabbari/detailse2";
 
   useEffect(() => {
     useTitle("سیستم جامع دانشگاهی گلستان");
@@ -25,7 +24,7 @@ function App() {
   return (
     <div className="flex flex-col h-screen">
       {isDefaultPage && <Form />}
-      {!isDefaultPage && !isDetailsePage && (
+      {!isDefaultPage && !isDetailsePage && !isDetailsse2Page && (
         <>
           <HeaderSaidbar />
           <div className="flex flex-1">
@@ -34,7 +33,7 @@ function App() {
               <Routes>
                 <Route path="/sinajabbari" element={<AdminPanel />}>
                   <Route index element={<MainSaidbar />} />
-                  {/* <Route path="detailse" element={<Detailse />} /> */}
+                  {/* <Route path="authenticateuser" element={<Detailsse2 />} /> */}
                 </Route>
               </Routes>
             </main>
@@ -42,9 +41,13 @@ function App() {
         </>
       )}
       {isDetailsePage && (
-        <header className="p-4 ">
-          {/* اینجا محتوای header خاص برای صفحه detailse قرار می‌دهید */}
+        <header className="p-4">
           <Detailse />
+        </header>
+      )}
+      {isDetailsse2Page && (
+        <header className="p-4">
+          <Detailsse2 />
         </header>
       )}
     </div>
