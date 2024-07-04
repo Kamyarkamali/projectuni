@@ -8,8 +8,6 @@ function Header() {
   return (
     <>
       <div className="flex justify-between max-w-[1420px] mx-auto">
-        {/* <div>right</div> */}
-
         <div className="flex flex-col items-center justify-center w-full">
           <p className="text-[9px]">به نام خدا</p>
           <div className="flex flex-col items-center mt-[2rem]">
