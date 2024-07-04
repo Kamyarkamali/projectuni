@@ -28,24 +28,13 @@ function Form() {
         body: JSON.stringify({ Info }),
       });
       const result = await response.json();
-<<<<<<< HEAD
 
-      if (response.ok) {
-        localStorage.setItem("token", result.user.email);
-        console.log("successful");
-        alert("سینا جباری خوش  امدید");
-        window.location.href = "/sinajabbari";
-      }
-
-      console.log(result);
-=======
       if (response.status === 200) {
         localStorage.setItem("user", result);
         setloading({ status: true, value: true });
       } else {
         throw new Error("Request failed");
       }
->>>>>>> 95f45457ede0b1462b8faf3d0db83c01c83a152d
       console.log(result.message);
     } catch (error) {
       console.log(error);
@@ -135,8 +124,6 @@ function Form() {
                 type="text"
                 className="border-[1px] outline-none text-[12px] w-[130px] mr-[6.9rem] border-gray-400 h-[18px]"
               />
-
-<<<<<<< HEAD
             <div className="absolute left-[-8rem] top-[-1rem] bg-[#f9f8f4] flex justify-center p-3">
               {/* capcher */}
               <div className="bg-[#f9f8f4] border-[1px] border-gray-400 w-full p-4">
@@ -166,38 +153,6 @@ function Form() {
                     />
                   ))}
                 </svg>
-=======
-              <div className="absolute left-[-20rem] w-[30vw] flex justify-center p-3">
-                {/* capcher */}
-                <div className="bg-white w-full p-4">
-                  <svg width="100" height="30" className="px-2">
-                    {captcha.split("").map((char, index) => (
-                      <text
-                        key={index}
-                        x={index * 20 + 5}
-                        y={20}
-                        // fill={getRandomColor()}
-                        fontSize="20"
-                        fontFamily="Arial"
-                        className="absolute top-10"
-                      >
-                        {char}
-                      </text>
-                    ))}
-                    {lines.map((line, index) => (
-                      <line
-                        key={index}
-                        x1={line.x1}
-                        y1={line.y1}
-                        x2={line.x2}
-                        y2={line.y2}
-                        stroke={line.stroke}
-                        strokeWidth="2"
-                      />
-                    ))}
-                  </svg>
-                </div>
->>>>>>> 95f45457ede0b1462b8faf3d0db83c01c83a152d
               </div>
             </div>
             {/* button login exit */}
@@ -228,10 +183,10 @@ function Form() {
               </button>
             </div>
           </div>
+          </div>
         </form>
 
         <p
-          onClick={alertHandeler}
           className="text-[13px] z-20 text-right w-full text-red-500 mr-3 cursor-pointer mt-[-5rem]"
         >
           تنظيمات | بازيابي كلمه عبور دانشجويان (در صورت ادامه مشكل از لينك بالا
