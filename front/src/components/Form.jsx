@@ -29,9 +29,12 @@ function Form() {
       });
       const result = await response.json();
 
-      if (response.status === 200) {
-        localStorage.setItem("user", result);
+      console.log(result);
+
+      if (response.ok) {
+        localStorage.setItem("token", result.user.email);
         setloading({ status: true, value: true });
+        window.location.href = "/sinajabbari";
       } else {
         throw new Error("Request failed");
       }
@@ -124,90 +127,90 @@ function Form() {
                 type="text"
                 className="border-[1px] outline-none text-[12px] w-[130px] mr-[6.9rem] border-gray-400 h-[18px]"
               />
-            <div className="absolute left-[-8rem] top-[-1rem] bg-[#f9f8f4] flex justify-center p-3">
-              {/* capcher */}
-              <div className="bg-[#f9f8f4] border-[1px] border-gray-400 w-full p-4">
-                <svg width="100" height="30" className="px-2">
-                  {captcha.split("").map((char, index) => (
-                    <text
-                      key={index}
-                      x={index * 20 + 5}
-                      y={20}
-                      // fill={getRandomColor()}
-                      fontSize="20"
-                      fontFamily="Arial"
-                      className="absolute top-10"
-                    >
-                      {char}
-                    </text>
-                  ))}
-                  {lines.map((line, index) => (
-                    <line
-                      key={index}
-                      x1={line.x1}
-                      y1={line.y1}
-                      x2={line.x2}
-                      y2={line.y2}
-                      stroke={line.stroke}
-                      strokeWidth="2"
-                    />
-                  ))}
-                </svg>
+              <div className="absolute left-[-8rem] top-[-1rem] bg-[#f9f8f4] flex justify-center p-3">
+                {/* capcher */}
+                <div className="bg-[#f9f8f4] border-[1px] border-gray-400 w-full p-4">
+                  <svg width="100" height="30" className="px-2">
+                    {captcha.split("").map((char, index) => (
+                      <text
+                        key={index}
+                        x={index * 20 + 5}
+                        y={20}
+                        // fill={getRandomColor()}
+                        fontSize="20"
+                        fontFamily="Arial"
+                        className="absolute top-10"
+                      >
+                        {char}
+                      </text>
+                    ))}
+                    {lines.map((line, index) => (
+                      <line
+                        key={index}
+                        x1={line.x1}
+                        y1={line.y1}
+                        x2={line.x2}
+                        y2={line.y2}
+                        stroke={line.stroke}
+                        strokeWidth="2"
+                      />
+                    ))}
+                  </svg>
+                </div>
+              </div>
+              {/* button login exit */}
+
+              <div className="flex gap-3 justify-center absolute top-[3rem] left-[2rem] mt-9 w-full">
+                <a
+                  onClick={alertHandeler}
+                  className="text-[12px] md:ml-4 text-blue-600 border-b-[1px] border-blue-600 "
+                  href="#"
+                >
+                  ورود از طریق احراز هویت مرکزی
+                </a>
+                <button className="text-[11px] bg-[#F0F0EA] hover:border-yellow-400 font-bold justify-center gap-1 flex items-center border-[1px] w-[60px] rounded-sm border-black">
+                  <img
+                    src={vorod}
+                    alt="login"
+                    className="rounded-lg w-[17px] h-[14px]"
+                  />
+                  ورود
+                </button>
+                <button className="text-[11px] bg-[#F0F0EA] hover:border-yellow-400 font-bold justify-center gap-1 flex items-center border-[1px] w-[60px]  rounded-sm border-black">
+                  <img
+                    className="w-[17px] rounded-full object-cover"
+                    src={khoroj}
+                    alt="exits"
+                  />
+                  خروج
+                </button>
               </div>
             </div>
-            {/* button login exit */}
-
-            <div className="flex gap-3 justify-center ml-[6rem] mt-9 w-full">
-              <a
-                onClick={alertHandeler}
-                className="text-[12px] md:ml-4 text-blue-600 border-b-[1px] border-blue-600 "
-                href="#"
-              >
-                ورود از طریق احراز هویت مرکزی
-              </a>
-              <button className="text-[11px] bg-[#F0F0EA] hover:border-yellow-400 font-bold justify-center gap-1 flex items-center border-[1px] w-[60px] rounded-sm border-black">
-                <img
-                  src={vorod}
-                  alt="login"
-                  className="rounded-lg w-[17px] h-[14px]"
-                />
-                ورود
-              </button>
-              <button className="text-[11px] bg-[#F0F0EA] hover:border-yellow-400 font-bold justify-center gap-1 flex items-center border-[1px] w-[60px]  rounded-sm border-black">
-                <img
-                  className="w-[17px] rounded-full object-cover"
-                  src={khoroj}
-                  alt="exits"
-                />
-                خروج
-              </button>
-            </div>
-          </div>
           </div>
         </form>
 
-        <p
-          className="text-[13px] z-20 text-right w-full text-red-500 mr-3 cursor-pointer mt-[-5rem]"
-        >
+        <p className="text-[13px] z-20 text-right w-full text-red-500 mr-3 cursor-pointer mt-[-5rem]">
           تنظيمات | بازيابي كلمه عبور دانشجويان (در صورت ادامه مشكل از لينك بالا
           استفاده نماييد) | بازيابي كلمه عبور اساتيد | | مشاهده دروس ارائه شده
         </p>
       </div>
       {loading.status === false ? (
         ""
-      ) : loading.status === true  && loading.value === true  ? (
+      ) : loading.status === true && loading.value === true ? (
         <div className="bg-green-800 flex items-center gap-[10rem] absolute bottom-[-9.6rem] z-20 w-full left-0">
-        <p className="bg-green-800 text-white text-sm">1 پیغام</p>
-        <p className="bg-green-800  text-[12px] text-white">
-          ورود با موفقیت انجام شد
-        </p>
-      </div>
-      ): <div className="bg-[#8b008b] flex items-center gap-[10rem] absolute bottom-[-9.6rem] z-20 w-full left-0">
-      <p className="bg-[#8b008b] text-white text-sm">1 خطا</p>
-      <p className="bg-[#8b008b]  text-[12px] text-white">
-      کد1 : شناسه کاربري يا گذرواژه اشتباه است.
-      </p>
-    </div>}
+          <p className="bg-green-800 text-white text-sm">1 پیغام</p>
+          <p className="bg-green-800  text-[12px] text-white">
+            ورود با موفقیت انجام شد
+          </p>
+        </div>
+      ) : (
+        <div className="bg-[#8b008b] flex items-center gap-[10rem] absolute bottom-[-9.6rem] z-20 w-full left-0">
+          <p className="bg-[#8b008b] text-white text-sm">1 خطا</p>
+          <p className="bg-[#8b008b]  text-[12px] text-white">
+            کد1 : شناسه کاربري يا گذرواژه اشتباه است.
+          </p>
+        </div>
+      )}
     </>
   );
 }
